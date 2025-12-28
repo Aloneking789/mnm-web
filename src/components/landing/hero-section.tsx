@@ -16,7 +16,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/60 rounded-3xl" />
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
         <div className="container">
-          <h1 className="font-headline text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="font-headline text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
             Ambition is everywhere. <br />
             <span className="text-primary">MatchMyCofounder</span> is where it&apos;s shaped.
           </h1>
