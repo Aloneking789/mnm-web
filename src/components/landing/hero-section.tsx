@@ -4,15 +4,16 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[80vh] min-h-[600px] w-full text-white overflow-hidden">
-      <video
-        src="https://cdn.jsdelivr.net/gh/Aloneking789/mnm-web@main/public/hero.mp4"
-        autoPlay
-        loop
-        muted
-        className="absolute inset-0 h-full w-full object-cover"
-      />
-      <div className="absolute inset-0 bg-black/60" />
+    <section className="relative px-4 py-6 md:px-6 md:py-8">
+      <div className="relative h-[80vh] min-h-[600px] w-full text-white overflow-hidden rounded-3xl">
+        <video
+          src="https://cdn.jsdelivr.net/gh/Aloneking789/mnm-web@main/public/hero.mp4"
+          autoPlay
+          loop
+          muted
+          className="absolute inset-0 h-full w-full object-cover rounded-3xl"
+        />
+      <div className="absolute inset-0 bg-black/60 rounded-3xl" />
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
         <div className="container">
           <h1 className="font-headline text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
@@ -36,6 +37,7 @@ export default function HeroSection() {
             </Button>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
