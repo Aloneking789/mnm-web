@@ -83,7 +83,7 @@ export default function JoinFormSection() {
                 </div>
                  <div className="space-y-2">
                     <Label htmlFor="phone">Phone (Optional)</Label>
-                    <Input id="phone" name="phone" type="tel" placeholder="+1 123-456-7890" />
+                    <Input id="phone" name="phone" type="tel" placeholder="+91 9999999999" />
                      {state.errors?.phone && <p className="text-sm text-destructive">{state.errors.phone[0]}</p>}
                   </div>
                 <div className="space-y-2">
