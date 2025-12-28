@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section className="relative h-[80vh] min-h-[600px] w-full text-white overflow-hidden">
       <video
-        src="/hero.mp4"
+        src="https://cdn.jsdelivr.net/gh/Aloneking789/mnm-web@main/public/hero.mp4"
         autoPlay
         loop
         muted
