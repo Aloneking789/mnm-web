@@ -64,7 +64,7 @@ export default function Header() {
 
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className={cn(!isScrolled && "text-white hover:bg-white/10")}>
+              <Button variant="ghost" size="icon" className="text-gray-800 hover:bg-gray-200">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
