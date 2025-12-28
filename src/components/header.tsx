@@ -57,7 +57,7 @@ export default function Header() {
           <Button
             asChild
             variant={isScrolled ? "default" : "outline"}
-            className={cn("hidden rounded-full font-bold transition-transform hover:scale-105 md:flex bg-transparent", !isScrolled && "border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white")}
+            className="hidden rounded-full font-bold transition-transform hover:scale-105 md:flex bg-transparent border-black text-black hover:bg-black"
           >
             <Link href="#join-form">Join Now</Link>
           </Button>
