@@ -54,7 +54,7 @@ export default function Footer() {
                 <li><Link href="#" className="text-sm hover:text-primary">Terms of Service</Link></li>
               </ul>
             </div>
-             <div>
+            <div>
               <h3 className="font-headline font-semibold uppercase text-foreground">Connect</h3>
               <div className="mt-4 flex space-x-2">
                 {socialLinks.map((social) => (
