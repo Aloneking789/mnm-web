@@ -74,6 +74,11 @@ export default function JoinFormSection() {
           <CardContent className="p-8">
             <form ref={formRef} action={dispatch} className="space-y-6">
               <div className="space-y-2">
+                <Label htmlFor="name">Full Name</Label>
+                <Input id="name" name="name" placeholder="Jane Doe" required />
+                {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name[0]}</p>}
+              </div>
+              <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
                 <Input id="email" name="email" type="email" placeholder="jane@example.com" required />
                 {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email[0]}</p>}

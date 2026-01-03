@@ -41,7 +41,7 @@ export async function handleJoin(prevState: any, formData: FormData) {
     return {
       message: "Thank you for joining! You can now join our WhatsApp group.",
       errors: {},
-      redirectUrl: "https://chat.whatsapp.com/your-group-invite"
+      redirectUrl: "https://chat.whatsapp.com/F9cgcA0rNd2KR6lKx8vnYz"
     };
   } catch (error: any) {
     if (error.code === 'P2002') {
