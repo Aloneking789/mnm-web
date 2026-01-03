@@ -11,21 +11,22 @@ const joinSchema = z.object({
 });
 
 export async function handleJoin(prevState: any, formData: FormData) {
-  const validatedFields = joinSchema.safeParse({
-    name: formData.get("name"),
-    email: formData.get("email"),
-    phone: formData.get("phone") || undefined,
-    category: formData.get("category"),
-  });
-
-  if (!validatedFields.success) {
-    return {
-      message: "Please fix the errors below.",
-      errors: validatedFields.error.flatten().fieldErrors,
-    };
-  }
-
   try {
+    const validatedFields = joinSchema.safeParse({
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone") || undefined,
+      category: formData.get("category"),
+    });
+
+    if (!validatedFields.success) {
+      return {
+        message: "Please fix the errors below.",
+        errors: validatedFields.error.flatten().fieldErrors,
+        redirectUrl: ""
+      };
+    }
+
     // Save to database
     const submission = await prisma.joinFormSubmission.create({
       data: {
@@ -44,16 +45,28 @@ export async function handleJoin(prevState: any, formData: FormData) {
       redirectUrl: "https://chat.whatsapp.com/F9cgcA0rNd2KR6lKx8vnYz"
     };
   } catch (error: any) {
+    console.error("Error in handleJoin:", error);
+    
     if (error.code === 'P2002') {
       return {
         message: "This email is already registered.",
         errors: { email: ["Email already exists"] },
+        redirectUrl: ""
       };
     }
-    console.error("Error saving form submission:", error);
+    
+    if (error.message?.includes("ECONNREFUSED") || error.message?.includes("connect ECONNREFUSED")) {
+      return {
+        message: "Database connection failed. Please try again later.",
+        errors: {},
+        redirectUrl: ""
+      };
+    }
+
     return {
       message: "An error occurred. Please try again.",
       errors: {},
+      redirectUrl: ""
     };
   }
 }

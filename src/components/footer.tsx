@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Twitter, Linkedin, Facebook, Instagram, Youtube } from "lucide-react";
+import { Twitter, Linkedin, Facebook, Instagram, Music } from "lucide-react";
 import { Button } from "./ui/button";
 import { Logo } from "./icons";
 
@@ -14,7 +14,7 @@ const socialLinks = [
   { name: "LinkedIn", icon: Linkedin, href: "#" },
   { name: "Facebook", icon: Facebook, href: "#" },
   { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/matchmycofounder/" },
-  { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/@matchmycofounder/shorts" },
+  { name: "YouTube", icon: Music, href: "https://www.youtube.com/@matchmycofounder/shorts" },
 ];
 
 export default function Footer() {
