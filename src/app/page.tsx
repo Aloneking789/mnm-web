@@ -1,6 +1,5 @@
 import Header from "@/components/header";
 import HeroSection from "@/components/landing/hero-section";
-import BentoGridSection from "@/components/landing/bento-grid-section";
 import JoinFormSection from "@/components/landing/join-form-section";
 import Footer from "@/components/footer";
 import FaqSection from "@/components/landing/faq-section";
@@ -13,10 +12,9 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <div className="bg-background">
-          <BentoGridSection />
+          <JoinFormSection />
           <EcosystemSection />
           <FaqSection />
-          <JoinFormSection />
         </div>
       </main>
       <Footer />

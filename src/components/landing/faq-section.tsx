@@ -7,24 +7,24 @@ import {
 
 const faqs = [
   {
-    question: "What is MatchMyCofounder?",
-    answer: "MatchMyCofounder is a platform dedicated to connecting entrepreneurs, innovators, and investors. We help you find the right people to build your dream company with.",
+    question: "What is MatchMyCoFounder?",
+    answer: "It is a professional matchmaking platform. We help Founders find partners, Investors find ideas, and Professionals/Students find their next big startup project.",
   },
   {
-    question: "Who is this platform for?",
-    answer: "We welcome aspiring founders, experienced operators, domain experts, developers, designers, and investors who are passionate about building great companies.",
+    question: "When will the app be available?",
+    answer: "We are currently in the final build phase! By joining the waitlist today, you are \"pre-ordering\" your spot. We will notify you via email and WhatsApp the moment we go live.",
   },
   {
-    question: "Is this free to join?",
-    answer: "Yes, creating a profile and browsing our network is free. We believe in making connections accessible to everyone.",
+    question: "What do I get for joining the waitlist now?",
+    answer: "Early birds get exclusive priority access to the app before the general public. You will also receive a special Premium subscription bonus (like a free trial period) that won't be available after we launch.",
   },
   {
-    question: "How do you match co-founders?",
-    answer: "Our platform uses a combination of your profile information, interests, skills, and stated goals to suggest potential matches. You can then connect and explore the possibility of working together.",
+    question: "How does the matching work?",
+    answer: "Once we launch, you'll create a profile based on your category (Founder, Investor, Pro, or Student). Our system then introduces you to the people who have exactly what you're looking for—no more endless searching.",
   },
   {
-    question: "What is the application process?",
-    answer: "The process starts with the application form on our website. After that, you'll create your profile to start connecting with others in the network.",
+    question: "Is my data safe?",
+    answer: "Absolutely. We only use your email and WhatsApp to send you your launch invite and important project updates. No spam, ever.",
   },
 ];
 

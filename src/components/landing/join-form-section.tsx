@@ -18,12 +18,11 @@ function SubmitButton() {
       {pending ? (
         <>
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Submitting...
+          Claiming...
         </>
       ) : (
         <>
-          Join the Network
-          <ArrowRight className="ml-2 h-4 w-4" />
+          CLAIM MY FREE PREMIUM
         </>
       )}
     </Button>
@@ -38,7 +37,7 @@ export default function JoinFormSection() {
 
   useEffect(() => {
     if (state.message && !state.redirectUrl) {
-       toast({
+      toast({
         title: "Error",
         description: state.message,
         variant: "destructive",
@@ -58,53 +57,50 @@ export default function JoinFormSection() {
     <section id="join-form" className="py-20 md:py-28 bg-background">
       <div className="container">
         <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-                Ready to build?
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-                We're looking for the ambitious, the visionary, and the relentless. If that's you, let's talk.
-            </p>
+          <div className="mb-6 inline-block">
+            <div className="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+              Limited Offer
+            </div>
+          </div>
+          <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+            Join the waitlist today and get 100% Free Premium subscription
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            This is the most important part of the page
+          </p>
         </div>
 
         <Card className="mx-auto mt-12 max-w-xl border-2 border-border/50 shadow-xl rounded-3xl">
           <CardContent className="p-8">
             <form ref={formRef} action={dispatch} className="space-y-6">
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                    <div className="space-y-2">
-                        <Label htmlFor="name">Full Name</Label>
-                        <Input id="name" name="name" placeholder="Jane Doe" required />
-                        {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name[0]}</p>}
-                    </div>
-                    <div className="space-y-2">
-                        <Label htmlFor="email">Email Address</Label>
-                        <Input id="email" name="email" type="email" placeholder="jane@example.com" required />
-                        {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email[0]}</p>}
-                    </div>
-                </div>
-                 <div className="space-y-2">
-                    <Label htmlFor="phone">Phone (Optional)</Label>
-                    <Input id="phone" name="phone" type="tel" placeholder="+91 9999999999" />
-                     {state.errors?.phone && <p className="text-sm text-destructive">{state.errors.phone[0]}</p>}
-                  </div>
-                <div className="space-y-2">
+              <div className="space-y-2">
+                <Label htmlFor="email">Email Address</Label>
+                <Input id="email" name="email" type="email" placeholder="jane@example.com" required />
+                {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email[0]}</p>}
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="phone">WhatsApp Number (Optional)</Label>
+                <Input id="phone" name="phone" type="tel" placeholder="+91 9999999999" />
+                {state.errors?.phone && <p className="text-sm text-destructive">{state.errors.phone[0]}</p>}
+              </div>
+              <div className="space-y-2">
                 <Label htmlFor="category">I am a...</Label>
                 <Select name="category" required>
-                    <SelectTrigger id="category">
+                  <SelectTrigger id="category">
                     <SelectValue placeholder="Select your background" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="founder">Founder / Operator</SelectItem>
-                      <SelectItem value="investor">Domain Expert</SelectItem>
-                      <SelectItem value="student">Technologist</SelectItem>
-                      <SelectItem value="freelancer">Designer / Creative</SelectItem>
-                      <SelectItem value="professional">Something Else</SelectItem>
-                    </SelectContent>
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="founder">Founder</SelectItem>
+                    <SelectItem value="investor">Investor</SelectItem>
+                    <SelectItem value="student">Student</SelectItem>
+                    <SelectItem value="freelancer">Working Professional / Freelancer</SelectItem>
+                  </SelectContent>
                 </Select>
                 {state.errors?.category && <p className="text-sm text-destructive">{state.errors.category[0]}</p>}
-                </div>
-                <div className="pt-4">
-                  <SubmitButton />
-                </div>
+              </div>
+              <div className="pt-4">
+                <SubmitButton />
+              </div>
             </form>
           </CardContent>
         </Card>
